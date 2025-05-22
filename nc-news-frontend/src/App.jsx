@@ -10,7 +10,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>NC News</h1>
       <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/article/:article_id" element={<ArticleView />} />
