@@ -7,9 +7,9 @@ return(
         <br></br>
 
         <nav>
-  <Link to="/">Home</Link>
+        <Link to="/">Home</Link>
 
-</nav>
+        </nav>
     </header>
 )
 }

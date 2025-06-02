@@ -7,11 +7,12 @@ import EditArticle from "./components/EditArticle"
 import Profile from "./components/Profile"
 
 function App() {
+const [isLoading, setIsLoading] = useState(false)
 
   return (
     <div className="App">
       <Routes>
-      <Route path="/" element={<Home />} />
+      <Route path="/" element={<Home setIsLoading={setIsLoading} />} />
       <Route path="/article/:article_id" element={<ArticleView />} />
       <Route path="/edit/:article_id" element={<EditArticle />} />
       <Route path="/profile" element={<Profile />} />
