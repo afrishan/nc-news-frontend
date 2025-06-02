@@ -1,8 +1,8 @@
 function Footer (){
     return (
-        <section>
-            <p>NC News. All Rights Reserved</p>
-        </ section>
+        <footer>
+            <p>© 2025 NC News. All rights reserved.</p>
+        </ footer>
     )
 }
 
