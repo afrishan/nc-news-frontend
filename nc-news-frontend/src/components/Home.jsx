@@ -1,16 +1,25 @@
 import {useEffect, useState} from "react"
 import Header from "./Header"
 import Footer from "./Footer"
+import { getAllArticles } from "../api"
 
 function Home (setIsLoading){
 
     useEffect (()=> {
         setIsLoading(true)
-        .then(()=>{
-            
+        
+        getAllArticles()
+        .then(({articles})=>{
+            console.log(articles)
+            setIsLoading(false)
         })
+        .catch(({message}) => {
+        setError(message)
+        setIsLoading(false);
 
-    })
+      });
+
+    }, [])
     return(
         <section>
         <Header />
