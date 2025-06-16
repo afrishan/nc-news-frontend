@@ -2,6 +2,7 @@ import {useEffect, useState} from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import { getAllArticles } from "../api"
+import ArticleCard from "../components/ArticleCard"
 
 function Home ({setIsLoading}){
     const [articlesList, setArticlesList] = useState([])
@@ -24,8 +25,13 @@ function Home ({setIsLoading}){
         <section>
         <Header />
         <div>
+            <h2>Articles</h2>
         {articlesList.map((article)=>{
-            return <li key={article.article_id}> {article.title} </li>
+            return (<ArticleCard 
+                    key={article.article_id} 
+                    article={article}/>
+            )
+
         })
 }
         </div>
